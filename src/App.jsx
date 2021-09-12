@@ -17,6 +17,10 @@ function App() {
       .catch(console.log);
   };
 
+  const handleSubmit2 = (e) => {
+    axios.get("/auth/me").then(console.log).catch(console.log);
+  };
+
   const hanldeChanhge = (e) => {
     setState((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
   };
@@ -34,6 +38,11 @@ function App() {
           <input type="text" name="password" onChange={hanldeChanhge} value={state.password} />
         </div>
         <button type="submit">전송</button>
+        <div>
+          <button type="button" onClick={handleSubmit2}>
+            get axios
+          </button>
+        </div>
       </form>
     </div>
   );
