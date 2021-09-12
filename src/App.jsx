@@ -18,7 +18,13 @@ function App() {
   };
 
   const handleSubmit2 = (e) => {
-    axios.get("/auth/me").then(console.log).catch(console.log);
+    axios
+      .get("/auth/me")
+      .then((v) => {
+        console.log(v.data);
+        setState({ ...v.data });
+      })
+      .catch(console.log);
   };
 
   const hanldeChanhge = (e) => {
@@ -44,6 +50,10 @@ function App() {
           </button>
         </div>
       </form>
+      <div>
+        <div>id:{state.id}</div>
+        <div>password:{state.password}</div>
+      </div>
     </div>
   );
 }
