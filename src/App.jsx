@@ -10,7 +10,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("www.mw.r-e.kr/auth", {
+      .post("/auth", {
         ...state,
       })
       .then(console.log)
