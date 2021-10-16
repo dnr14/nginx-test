@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import Button from "./Button";
 
 function App() {
   const [state, setState] = useState({
@@ -28,7 +29,10 @@ function App() {
   };
 
   const hanldeChanhge = (e) => {
-    setState((prevState) => ({ ...prevState, [e.target.name]: e.target.value }));
+    setState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   return (
@@ -37,17 +41,27 @@ function App() {
       <form onSubmit={handleSubmit}>
         <div>
           <span>id:</span>
-          <input type="text" name="id" onChange={hanldeChanhge} value={state.id} />
+          <input
+            type="text"
+            name="id"
+            onChange={hanldeChanhge}
+            value={state.id}
+          />
         </div>
         <div>
           <span>passowrd:</span>
-          <input type="text" name="password" onChange={hanldeChanhge} value={state.password} />
+          <input
+            type="text"
+            name="password"
+            onChange={hanldeChanhge}
+            value={state.password}
+          />
         </div>
         <button type="submit">전송</button>
         <div>
-          <button type="button" onClick={handleSubmit2}>
+          <Button type="button" onClick={handleSubmit2}>
             get axios
-          </button>
+          </Button>
         </div>
       </form>
       <div>
