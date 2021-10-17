@@ -60,7 +60,7 @@ function App() {
         <button type="submit">전송</button>
         <div>
           <Button type="button" onClick={handleSubmit2}>
-            get axios
+            axios 호출
           </Button>
         </div>
       </form>
