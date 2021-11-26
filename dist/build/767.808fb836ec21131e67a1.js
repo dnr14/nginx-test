@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_devfolio_board=self.webpackChunkreact_devfolio_board||[]).push([[767],{84767:(e,a,t)=>{t.r(a),t.d(a,{default:()=>n});var l=t(67294);const n=function(e){return e=e.thumbnail,l.createElement(l.Fragment,null,l.createElement("img",{src:e||"/build/images/ea55d48e3801c9495f482c24df937f30.jpg",alt:e?"thumbnail":"noThumbnail"}))}}}]);
